@@ -158,6 +158,13 @@ namespace Il2CppInterop.Runtime.Injection
                 pattern = "\xE8\x00\x00\x00\x00\x0F\xB7\x47\x48\x48",
                 mask = "x????xxxxx",
                 xref = true
+            },
+            // Unity 6000.0.58f2 (x64)
+            new MemoryUtils.SignatureDefinition
+            {
+                pattern = "\xE8\x00\x00\x00\x00\x41\x8B\x8F",
+                mask = "x????xxx",
+                xref = true
             }
         };
 

@@ -48,7 +48,14 @@ namespace Il2CppInterop.Runtime.Injection.Hooks
                 pattern = "\x48\x89\x5C\x24\x08\x48\x89\x6C\x24\x10\x56\x57\x41\x54\x41\x56\x41\x57\x48\x81\xEC\xB0\x00",
                 mask = "xxxxxxxxxxxxxxxxxxxxxxx",
                 xref = false
-            }
+            },
+            // Unity 6000.0.58f2 (x64) (Suzerain)
+            new MemoryUtils.SignatureDefinition
+            {
+                pattern = "\x40\x53\x48\x83\xEC\x00\x80\x3D\x00\x00\x00\x00\x00\x48\x8B\xD9\x75\x00\x48\x8D\x0D\x00\x00\x00\x00\xE8\x00\x00\x00\x00\xC6\x05\x00\x00\x00\x00\x00\x48\x8B\x4B\x00\x45\x33\xC0\x33\xD2\xE8",
+                mask = "xxxxx?xx?????xxxx?xxx????x????xx?????xxx?xxxxxx",
+                xref = false
+            },
         };
 
         public override IntPtr FindTargetMethod()
