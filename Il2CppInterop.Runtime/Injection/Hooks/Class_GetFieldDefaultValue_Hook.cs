@@ -42,7 +42,12 @@ namespace Il2CppInterop.Runtime.Injection.Hooks
                 mask = "xxxxxxxxxxxxxx?xxxxxxxxxxxxx",
                 xref = false
             },
-
+            new MemoryUtils.SignatureDefinition
+            {
+                pattern = "\x48\x89\x5C\x24\x00\x48\x89\x74\x24\x00\x57\x48\x83\xEC\x00\x48\x8B\x59\x00\x48\x8B\xF9\x48\x8B\xF2",
+                mask = "xxxx?xxxx?xxxx?xxx?xxxxxx",
+                xref = false
+            },
             // V Rising - Unity 2022.3.23 (x64)
             new MemoryUtils.SignatureDefinition
             {
