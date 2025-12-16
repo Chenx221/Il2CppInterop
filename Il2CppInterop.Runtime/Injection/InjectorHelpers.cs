@@ -171,6 +171,14 @@ namespace Il2CppInterop.Runtime.Injection
                 pattern = "\xE8\x00\x00\x00\x00\x48\x81\xFD",
                 mask = "x????xxx",
                 xref = true
+            },
+
+            //32bit
+            new MemoryUtils.SignatureDefinition
+            {
+                pattern = "\xE8\x00\x00\x00\x00\x0F\xB7\x87",
+                mask = "x????xxx",
+                xref = true
             }
         };
 

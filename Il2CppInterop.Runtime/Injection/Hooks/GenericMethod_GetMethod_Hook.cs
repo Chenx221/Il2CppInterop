@@ -68,6 +68,14 @@ namespace Il2CppInterop.Runtime.Injection.Hooks
                 mask = "xxxx?xxxx?xx?????xxxx?xxx????x????xx?????xxx?xxx",
                 xref = false
             },
+
+            // 32bit
+            new MemoryUtils.SignatureDefinition
+            {
+                pattern = "\x55\x8B\xEC\x80\x3D\x00\x00\x00\x00\x00\x56\x8B\x75\x00\x75\x00\x68\x00\x00\x00\x00\xE8\x00\x00\x00\x00\x68\x00\x00\x00\x00\xE8\x00\x00\x00\x00\x83\xC4\x00\xC6\x05\x00\x00\x00\x00\x00\x6A\x00\x6A",
+                mask = "xxxxx?????xxx?x?x????x????x????x????xx?xx?????x?x",
+                xref = false
+            },
         };
 
         public override IntPtr FindTargetMethod()

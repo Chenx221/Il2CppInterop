@@ -82,7 +82,15 @@ namespace Il2CppInterop.Runtime.Injection.Hooks
                 pattern = "\x40\x53\x48\x83\xEC\x20\x48\x8B\xDA\xE8\xCC\xCC\xCC\xCC\x4C",
                 mask = "xxxxxxxxxx????x",
                 xref = false
-            }
+            },
+
+            //32bit
+            new MemoryUtils.SignatureDefinition
+            {
+                pattern = "\x55\x8B\xEC\x8B\x4D\x00\x83\xEC\x00\xB8\x00\x00\x00\x00\x56",
+                mask = "xxxxx?xx?x????x",
+                xref = false
+            },
         };
 
         private static nint FindClassGetFieldDefaultValueXref(bool forceICallMethod = false)

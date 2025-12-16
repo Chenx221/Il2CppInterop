@@ -30,6 +30,15 @@ internal class GarbageCollector_RunFinalizer_Patch : Hook<GarbageCollector_RunFi
 
     private static readonly MemoryUtils.SignatureDefinition[] s_signatures =
     {
+        //32bit
+        new()
+        {
+            pattern = "\x55\x8B\xEC\x51\x56\x8B\x75\x00\xC7\x45\x00\x00\x00\x00\x00\x00\x00\xE8",
+            mask = "xxxxxxx?xx???????x",
+            xref = false,
+        },
+
+
         new()
         {
             // Among Us - 2020.3.22 (x86)
@@ -64,7 +73,9 @@ internal class GarbageCollector_RunFinalizer_Patch : Hook<GarbageCollector_RunFi
             mask = "xxxxxxxxxxxxxxxxxx",
             xref = false,
         },
-        
+
+
+
     };
 
     public override IntPtr FindTargetMethod()
