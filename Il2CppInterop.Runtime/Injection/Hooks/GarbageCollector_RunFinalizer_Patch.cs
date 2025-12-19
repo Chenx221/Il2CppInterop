@@ -53,6 +53,15 @@ internal class GarbageCollector_RunFinalizer_Patch : Hook<GarbageCollector_RunFi
             mask = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
             xref = false,
         },
+
+        // unity 2021.3.21f1
+        new()
+        {
+            pattern = "\x40\x53\x48\x83\xEC\x00\x48\x8B\xD9\x48\xC7\x44\x24\x00\x00\x00\x00\x00\x00\x00\x00\xE8",
+            mask = "xxxxx?xxxxxxx????????x",
+            xref = false,
+        },
+
         new()
         {
             pattern = "\x48\x89\x5C\x24\x00\x48\x89\x74\x24\x00\x57\x48\x83\xEC\x00\x00\x00\x00\x33\xFF\x48\x89\x7C\x24",
