@@ -159,6 +159,13 @@ namespace Il2CppInterop.Runtime.Injection
                 mask = "x????xxxxx",
                 xref = true
             },
+            // 2022 测试通过，需先于6000
+            new MemoryUtils.SignatureDefinition
+            {
+                pattern = "\xE8\x00\x00\x00\x00\x48\x81\xFD",
+                mask = "x????xxx",
+                xref = true
+            },
             // Unity 6000.0.58f2 (x64)
             new MemoryUtils.SignatureDefinition
             {
@@ -166,13 +173,6 @@ namespace Il2CppInterop.Runtime.Injection
                 mask = "x????xxx",
                 xref = true
             },
-            new MemoryUtils.SignatureDefinition
-            {
-                pattern = "\xE8\x00\x00\x00\x00\x48\x81\xFD",
-                mask = "x????xxx",
-                xref = true
-            },
-
             //32bit
             new MemoryUtils.SignatureDefinition
             {

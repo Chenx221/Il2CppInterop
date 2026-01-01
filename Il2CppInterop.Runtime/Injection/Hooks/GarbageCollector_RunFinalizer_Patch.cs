@@ -82,7 +82,13 @@ internal class GarbageCollector_RunFinalizer_Patch : Hook<GarbageCollector_RunFi
             mask = "xxxxxxxxxxxxxxxxxx",
             xref = false,
         },
-
+        new()
+        {
+            // Sprocket - 2022.3.62 (x64)
+            pattern = "\x48\x89\x5C\x24\x00\x57\x48\x83\xEC\x00\x00\x00\x00\x48\x8B\xF9\x48\xC7\x44\x24",
+            mask = "xxxx?xxxx????xxxxxxx",
+            xref = false,
+        },
 
 
     };

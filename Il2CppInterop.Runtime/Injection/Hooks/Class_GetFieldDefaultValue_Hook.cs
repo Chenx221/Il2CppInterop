@@ -48,6 +48,15 @@ namespace Il2CppInterop.Runtime.Injection.Hooks
                 mask = "xxxx?xxxx?xxxx?xxx?xxxxxx",
                 xref = false
             },
+
+            // 2022.3.62 Sprocket
+            new MemoryUtils.SignatureDefinition
+            {
+                pattern = "\x48\x89\x5C\x24\x00\x57\x48\x83\xEC\x00\x48\x8B\x41\x00\x48\x8B\xD9\x48\x8B\xFA",
+                mask = "xxxx?xxxx?xxx?xxxxxx",
+                xref = false
+            },
+
             // V Rising - Unity 2022.3.23 (x64)
             new MemoryUtils.SignatureDefinition
             {
